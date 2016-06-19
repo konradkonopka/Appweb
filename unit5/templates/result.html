@@ -1,0 +1,61 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="page-header">
+    <h1>Wyniki</h1>
+    <div id="chart_div"></div>
+</div>
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+
+    google.charts.load('current', {packages: ['corechart']});
+    google.charts.setOnLoadCallback(drawCharts);
+    function drawCharts(){
+        function drawChart(x, name, id){
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Description');
+            data.addColumn('number', 'Count');
+            data.addRows( x );
+            var options = {
+                title: name
+            };
+            var chart = new google.visualization.PieChart(document.getElementById(id));
+            chart.draw(data, options);
+        }
+        drawChart({{my_dict.gender|tojson}}, 'Płeć', 'gender');
+        drawChart({{my_dict.age|tojson}}, "Wiek",'age');
+        drawChart({{my_dict.ageonset|tojson}}, "Wiek rozpoczecia choroby",'ageonset');
+        drawChart({{my_dict.agediagnosis|tojson}}, "Wiek diagnozy", 'agediagnosis');
+        drawChart({{my_dict.durationms|tojson}}, "Czas trwania choroby",'durationms');
+        drawChart({{my_dict.edss|tojson}}, "Ostatni wynik EDSS",'edss');
+        drawChart({{my_dict.lastms|tojson}}, "Ostatni kurs MS",'lastms');
+        drawChart({{my_dict.relapse12|tojson}}, "Liczba nawrotow w ostatnich 12 miesiacach",'relapse12');
+        drawChart({{my_dict.relapse24|tojson}}, "Liczba nawrotow w ostatnich 24 miesiacach",'relapse24');
+    }
+
+
+    </script>
+  </head>
+<body>
+<!-- Identify where the chart should be drawn. -->
+<table class="columns">
+    <tr>
+        <div id="gender" style="width: 900px; height: 500px;"></div>
+        <div id="age" style="width: 900px; height: 500px;"></div>
+        <div id="ageonset" style="width: 900px; height: 500px;"></div>
+        <div id="agediagnosis" style="width: 900px; height: 500px;"></div>
+        <div id="durationms" style="width: 900px; height: 500px;"></div>
+        <div id="edss" style="width: 900px; height: 500px;"></div>
+        <div id="lastms" style="width: 900px; height: 500px;"></div>
+        <div id="relapse12" style="width: 900px; height: 500px;"></div>
+        <div id="relapse24" style="width: 900px; height: 500px;"></div>
+
+    </tr>
+</table>
+
+</body>
+{% endblock %}
