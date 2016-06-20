@@ -22,24 +22,24 @@ class Formdata(db.Model):
     created_at = db.Column(db.DateTime, default=datetime.now)
     plec = db.Column(db.Text, nullable=False)
     wiek = db.Column(db.Text)
-    wiekonset = db.Column(db.Text)
-    wiekdiagnosis = db.Column(db.Text)
-    czastrwania = db.Column(db.Text)
-    edss = db.Column(db.Text)
-    lastMS = db.Column(db.Text)
-    nawrot12 = db.Column(db.Text)
-    nawrot24 = db.Column(db.Text)
+    zarobki = db.Column(db.Text)
+    oczekiwania = db.Column(db.Text)
+    staz = db.Column(db.Text)
+    ostpodw = db.Column(db.Text)
+    zadowolenie = db.Column(db.Text)
+    zmianapracy = db.Column(db.Text)
+    htyg = db.Column(db.Text)
 
-    def __init__(self, plec, wiek, wiekonset, wiekdiagnosis, czastrwania, edss, lastMS, nawrot12, nawrot24):
+    def __init__(self, plec, wiek, zarobki, oczekiwania, staz, ostpodw , zadowolenie, zmianapracy, htyg):
         self.plec = plec
         self.wiek = wiek
-        self.wiekonset = wiekonset
-        self.wiekdiagnosis = wiekdiagnosis
-        self.czastrwania = czastrwania
-        self.edss = edss
-        self.lastMS = lastMS
-        self.nawrot12 = nawrot12
-        self.nawrot24 = nawrot24
+        self.zarobki = zarobki
+        self.oczekiwania = oczekiwania
+        self.staz = staz
+        self.ostpodw = ostpodw
+        self.zadowolenie = zadowolenie
+        self.zmianapracy = zmianapracy
+        self.htyg = htyg
 db.create_all()
 
 

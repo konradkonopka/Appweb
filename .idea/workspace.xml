@@ -36,18 +36,38 @@
       <file leaf-file-name="form.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/unit5/templates/form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2516">
-              <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+            <state relative-caret-position="2295">
+              <caret line="135" column="55" selection-start-line="135" selection-start-column="55" selection-end-line="135" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="welcome.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/unit5/templates/welcome.html">
+      <file leaf-file-name="raw.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/unit5/templates/raw.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="unit5_webapp.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/unit5/unit5_webapp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="697">
+              <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="welcome.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/unit5/templates/welcome.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -78,7 +98,6 @@
         <option value="$PROJECT_DIR$/unit5/formdata2.db" />
         <option value="$PROJECT_DIR$/unit5/formdata.db" />
         <option value="C:/Anaconda2/Lib/site-packages/flask_sqlalchemy/__init__.py" />
-        <option value="$PROJECT_DIR$/unit5/templates/raw.html" />
         <option value="$PROJECT_DIR$/unit5/outside_crawler.py" />
         <option value="$PROJECT_DIR$/dirbot/outside_crawler.py" />
         <option value="$PROJECT_DIR$/dirbot/spiders/outside_crawler.py" />
@@ -110,12 +129,13 @@
         <option value="$PROJECT_DIR$/README.rst" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/unit5/unit5_webapp.py" />
         <option value="$PROJECT_DIR$/dirbot/spiders/crawlmycrownspider.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Procfile.windows" />
         <option value="$PROJECT_DIR$/unit5/templates/base.html" />
         <option value="$PROJECT_DIR$/unit5/templates/welcome.html" />
+        <option value="$PROJECT_DIR$/unit5/templates/raw.html" />
+        <option value="$PROJECT_DIR$/unit5/unit5_webapp.py" />
         <option value="$PROJECT_DIR$/unit5/templates/form.html" />
       </list>
     </option>
@@ -726,13 +746,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/unit5/templates/raw.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../FlaskTask/unit5/formdata.db" />
     <entry file="file://$PROJECT_DIR$/../FlaskTask/unit5/templates/base.html" />
     <entry file="file://$PROJECT_DIR$/dirbot/spiders/crawlmycrown.py" />
@@ -854,13 +867,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/unit5/unit5_webapp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="66" column="19" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
@@ -892,18 +898,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/unit5/templates/form.html">
+    <entry file="file://$PROJECT_DIR$/unit5/templates/welcome.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2516">
-          <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+        <state relative-caret-position="357">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/unit5/templates/welcome.html">
+    <entry file="file://$PROJECT_DIR$/unit5/templates/raw.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unit5/templates/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2295">
+          <caret line="135" column="55" selection-start-line="135" selection-start-column="55" selection-end-line="135" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unit5/unit5_webapp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
           <folding />
         </state>
       </provider>
