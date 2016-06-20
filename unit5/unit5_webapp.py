@@ -261,17 +261,17 @@ def save():
     # Get data from FORM
     plec = request.form['plec']
     wiek = request.form['wiek']
-    wiekonset = request.form['wiekonset']
-    wiekdiagnosis = request.form['wiekdiagnosis']
-    czastrwania = request.form['czastrwania']
-    edss = request.form['edss']
-    lastMS = request.form['lastMS']
-    nawrot12 = request.form['nawrot12']
-    nawrot24 = request.form['nawrot24']
+    zarobki = request.form['zarobki']
+    oczekiwania = request.form['oczekiwania']
+    staz = request.form['staz']
+    ostpodw = request.form['ostpodw']
+    zadowolenie = request.form['zadowolenie']
+    zmianapracy = request.form['zmianapracy']
+    htyg = request.form['htyg']
 
 
     # Save the data
-    fd = Formdata(plec, wiek, wiekonset, wiekdiagnosis, czastrwania, edss, lastMS, nawrot12, nawrot24)
+    fd = Formdata(plec, wiek, zarobki, oczekiwania, staz, ostpodw, zadowolenie, zmianapracy, htyg)
     db.session.add(fd)
     db.session.commit()
 
