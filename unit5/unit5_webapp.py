@@ -259,15 +259,15 @@ def show_results():
 @app.route("/save", methods=['POST'])
 def save():
     # Get data from FORM
-    plec = request.form['plec']
-    wiek = request.form['wiek']
-    zarobki = request.form['zarobki']
-    oczekiwania = request.form['oczekiwania']
-    staz = request.form['staz']
-    ostpodw = request.form['ostpodw']
-    zadowolenie = request.form['zadowolenie']
-    zmianapracy = request.form['zmianapracy']
-    htyg = request.form['htyg']
+   # plec = request.form['plec']
+    #wiek = request.form['wiek']
+    #zarobki = request.form['zarobki']
+    #oczekiwania = request.form['oczekiwania']
+    #staz = request.form['staz']
+    #ostpodw = request.form['ostpodw']
+    #zadowolenie = request.form['zadowolenie']
+    #zmianapracy = request.form['zmianapracy']
+    #htyg = request.form['htyg']
 
 
     # Save the data
