@@ -259,7 +259,7 @@ def show_results():
 @app.route("/save", methods=['POST'])
 def save():
     # Get data from FORM
-   # plec = request.form['plec']
+    plec = request.form['plec']
     #wiek = request.form['wiek']
     #zarobki = request.form['zarobki']
     #oczekiwania = request.form['oczekiwania']
