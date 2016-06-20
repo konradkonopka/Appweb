@@ -265,9 +265,9 @@ def save():
     oczekiwania = request.form['oczekiwania']
     staz = request.form['staz']
     ostpodw = request.form['ostpodw']
-    #zadowolenie = request.form['zadowolenie']
-    #zmianapracy = request.form['zmianapracy']
-    #htyg = request.form['htyg']
+    zadowolenie = request.form['zadowolenie']
+    zmianapracy = request.form['zmianapracy']
+    htyg = request.form['htyg']
 
 
     # Save the data
