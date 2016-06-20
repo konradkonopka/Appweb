@@ -33,13 +33,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="unit5_webapp.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="unit5_webapp.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/unit5/unit5_webapp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="204" column="31" selection-start-line="204" selection-start-column="31" selection-end-line="204" selection-end-column="31" />
+            <state relative-caret-position="0">
+              <caret line="136" column="0" selection-start-line="65" selection-start-column="35" selection-end-line="136" selection-end-column="0" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webcrawler.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dirbot/spiders/webcrawler.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -170,8 +182,8 @@
         <option value="$PROJECT_DIR$/dirbot/items.py" />
         <option value="$PROJECT_DIR$/dirbot/spiders/crawlmycrownspider.py" />
         <option value="$PROJECT_DIR$/dirbot/pipelines.py" />
-        <option value="$PROJECT_DIR$/unit5/unit5_webapp.py" />
         <option value="$PROJECT_DIR$/unit5/templates/result.html" />
+        <option value="$PROJECT_DIR$/unit5/unit5_webapp.py" />
       </list>
     </option>
   </component>
@@ -801,7 +813,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../MirrorWeb/app.py" />
     <entry file="file://$PROJECT_DIR$/../FlaskTask/pandas_preprocessing/pre_processing1.py" />
     <entry file="file://$PROJECT_DIR$/../FlaskTask/pandas_preprocessing/pre_processing2.py" />
     <entry file="file://$PROJECT_DIR$/../FlaskTask/pandas_preprocessing/pre_processing3.py" />
@@ -1012,10 +1023,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/unit5/unit5_webapp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="204" column="31" selection-start-line="204" selection-start-column="31" selection-end-line="204" selection-end-column="31" />
+        <state relative-caret-position="0">
+          <caret line="136" column="0" selection-start-line="65" selection-start-column="35" selection-end-line="136" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dirbot/spiders/webcrawler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>

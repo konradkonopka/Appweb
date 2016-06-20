@@ -59,7 +59,7 @@ def show_raw():
 @app.route("/result")
 def show_result():
     print ("before")
-    os.system("python ../dirbot/spiders/webcrawl.py 1")
+    os.system("python ../dirbot/spiders/webcrawler.py 1")
     print ("after")
 
     with open('result.json') as data_file:
@@ -103,98 +103,6 @@ def show_result():
 
         my_dict={'plec': plec, 'wiek': wiek, 'wiekrozpoczecia':wiekrozpoczecia, 'wiekdiagnozy': wiekdiagnozy,'czastrwania': czastrwania, 'edss': edss,'kursms': kursms,'nawrot12': nawrot12,'nawrot24': nawrot24}
         return render_template('result.html', my_dict=my_dict)
-
-@app.route("/this_result")
-def show_this_result():
-    fd_list = db.session.query(Formdata).all()
-
-    # Some simple statistics for sample questions
-    plec = []
-    wiek = []
-    wiekonset = []
-    for el in fd_list:
-        plec.append(el.plec)
-        wiek.append(el.wiek)
-        wiekonset.append(el.wiekonset)
-
-
-
-    #Prepare data for google charts
-    data = [['Plec', plec], ['Wiek', wiek], ['Wiek rozpoczecia choroby', wiekonset]]
-    # pprint(data)
-    return render_template('this_result.html', data=data)
-
-@app.route("/results")
-def show_results():
-    fd_list = db.session.query(Formdata).all()
-
-    id_name = 'ID'
-    plec_name = 'Plec'
-    wiek_name = 'Wiek'
-    wiekonset_name = 'Wiek rozpoczecia choroby'
-    wiekdiagnosis_name = 'Wiek diagnozy'
-    czastrwania_name = 'Czas trwania choroby'
-    edss_name = 'Ostatni wynik EDSS'
-    lastMS_name = 'Ostatni kurs MS'
-    nawrot12_name = 'Liczba nawrotow w ostatnich 12 miesiacach'
-    nawrot24_name = 'Liczba nawrotow w ostatnich 24 miesiacach'
-
-    tableNames = [id_name, plec_name, wiek_name, wiekonset_name, wiekdiagnosis_name,
-             czastrwania_name, edss_name, lastMS_name, nawrot12_name, nawrot24_name]
-
-    ID = []
-    plec = []
-    wiek = []
-    wiekonset = []
-    wiekdiagnosis = []
-    czastrwania = []
-    edss = []
-    lastMS = []
-    nawrot12 = []
-    nawrot24 = []
-    for el in fd_list:
-        ID.append(str(el.id))
-        plec.append(str(el.plec))
-        wiek.append(str(el.wiek))
-        wiekonset.append(str(el.wiekonset))
-        wiekdiagnosis.append(str(el.wiekdiagnosis))
-        czastrwania.append(str(el.czastrwania))
-        edss.append(str(el.edss))
-        lastMS.append(str(el.lastMS))
-        nawrot12.append(str(el.nawrot12))
-        nawrot24.append(str(el.nawrot24))
-
-    dane = {id_name: ID,
-            plec_name: plec,
-            wiek_name: wiek,
-            wiekonset_name: wiekonset,
-            wiekdiagnosis_name: wiekdiagnosis,
-            czastrwania_name: czastrwania,
-            edss_name: edss,
-            lastMS_name: lastMS,
-            nawrot12_name: nawrot12,
-            nawrot24_name: nawrot24
-            }
-    data =[]
-    j = 1
-    for x in tableNames:
-        index = str(j)+") "
-        for i in range(0,len(dane[x])):
-            if j%2 == 1:
-                v = [index+x,index+x+" - "+str(dane[x][i]), 1]
-                data.append(v)
-                w = [index+x+" - "+str(dane[x][i]), "Pacjent "+ str(dane["ID"][i]), 1]
-                data.append(w)
-            else:
-                v = [index + x + " - " + str(dane[x][i]), index + x, 1]
-                data.append(v)
-                w = ["Pacjent " + str(dane["ID"][i]), index + x + " - " + str(dane[x][i]), 1]
-                data.append(w)
-        j += 1
-
-    print (dane)
-
-    return render_template('results.html', data=data)
 
 # [id_name, dane[id_name][1], 1],
 # [id_name, dane[id_name][2], 1],
