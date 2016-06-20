@@ -4,164 +4,131 @@
 {% block content %}
 
 <div class="page-header">
-  <h1>Proszę uzupełnić formularz</h1>
+  <h1>Proszę o udzielenie odpowiedzi</h1>
 </div>
 
 <form role="form" action="/save" method="post">
+    <h3>Dane osobowe</h3>
+    <div class="form-group">
+        <label for="first-name">Imię:</label>
+        <input type="text" class="form-control" id="first-name" name="first-name" required>
+    </div>
     <b>Płeć</b>
     <div class="form-group">
         <label class="radio-inline">
-          <input type="radio" name="plec" value="M">Mężczyzna
+          <input type="radio" name="q1" value="M" checked>Mężczyzna
         </label>
         <label class="radio-inline">
-          <input type="radio" name="plec" value="F">Kobieta
+          <input type="radio" name="q1" value="K">Kobieta
         </label>
     </div>
-
     <div class="form-group">
-      <label for="wiek">Wiek</label>
-      <select class="form-control" id="wiek" name="wiek">
-        <option><20</option>
-        <option>20-29</option>
-        <option>30-39</option>
-        <option>40-49</option>
-        <option>50-59</option>
-        <option>60-69</option>
-        <option>70-79</option>
-        <option>>=80</option>
-        <option>NA</option>
+        <label for="year-of-study">Rok studiów:</label>
+        <input type="number" class="form-control" id="age" name="year-of-study" min="1" max="6" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Adres email:</label>
+        <input type="email" class="form-control" id="email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="district">Dzielnica zamieszkania:</label>
+      <select class="form-control" id="district" name="district">
+      {% for element in districtsdata %}
+        <option value="{{ element.id }}">{{element.name}}</option>
+      {% endfor %}
       </select>
     </div>
-
-    <div class="form-group">
-      <label for="wiek">Wiek rozpoczęcia choroby</label>
-      <select class="form-control" id="wiekonset" name="wiekonset">
-        <option><20</option>
-        <option>20-29</option>
-        <option>30-39</option>
-        <option>40-49</option>
-        <option>50-59</option>
-        <option>60-69</option>
-        <option>70-79</option>
-        <option>>=80</option>
-        <option>NA</option>
+    <h3>Informacje o wynajmowanym mieszkaniu</h3>
+   <div class="form-group">
+      <label for="searching-time">Ile czasu zajęło ci znalezienie obecnego mieszkania:</label>
+      <select class="form-control" id="searching-time" name="searching-time">\
+       {% for element in searchingtimedata %}
+        <option value="{{ element.id }}">{{element.name}}</option>
+      {% endfor %}
       </select>
     </div>
-
-
-
     <div class="form-group">
-      <label for="wiek">Wiek diagnozy</label>
-      <select class="form-control" id="wiekdiagnosis" name="wiekdiagnosis">
-        <option><20</option>
-        <option>20-29</option>
-        <option>30-39</option>
-        <option>40-49</option>
-        <option>50-59</option>
-        <option>60-69</option>
-        <option>70-79</option>
-        <option>>=80</option>
-        <option>NA</option>
-      </select>
+        <label for="cost">Ile wynoszą twoje miesięczne wydatki mieszkaniowe (czynsz, odstępne, media):</label>
+        <input type="number" class="form-control" id="cost" name="cost" min="0" max="10000" required>
     </div>
-
-
-    <div class="form-group">
-      <label for="wiek">Czas trwania choroby</label>
-      <select class="form-control" id="czastrwania" name="czastrwania">
-        <option>0-4</option>
-        <option>5-9</option>
-        <option>10-14</option>
-        <option>15-19</option>
-        <option>>20</option>
-        <option>NA</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label for="wiek">Ostatni wynik EDSS</label>
-      <select class="form-control" id="edss" name="edss">
-        <option>0</option>
-        <option>1.0</option>
-        <option>1.5</option>
-        <option>2.0</option>
-        <option>2.5</option>
-        <option>3.0</option>
-        <option>3.5</option>
-        <option>4.0</option>
-        <option>4.5</option>
-        <option>5.0</option>
-        <option>5.5</option>
-        <option>6.0</option>
-        <option>6.5</option>
-        <option>7.0</option>
-        <option>7.5</option>
-        <option>8.0</option>
-        <option>8.5</option>
-        <option>9.0</option>
-        <option>9.5</option>
-        <option>10.0</option>
-        <option>NA</option>
-      </select>
-    </div>
-
-    <b>Ostatni kurs MS</b>
+    <b>Oceń poziom twojego zadowolenia z wynajmowanego mieszkania</b>
     <div class="form-group">
         <label class="radio-inline">
-          <input type="radio" name="lastMS" value="RR">RR
+          <input type="radio" name="q2" value="1">1 (Niezadowolony)
         </label>
         <label class="radio-inline">
-          <input type="radio" name="lastMS" value="SP">SP
-        </label>
-      <label class="radio-inline">
-          <input type="radio" name="lastMS" value="PP">PP
-        </label>
-      <label class="radio-inline">
-          <input type="radio" name="lastMS" value="PR">PR
-        </label>
-      <label class="radio-inline">
-          <input type="radio" name="lastMS" value="CIS">CIS
+          <input type="radio" name="q2" value="2">2 (Raczej niezadowolony)
         </label>
         <label class="radio-inline">
-          <input type="radio" name="lastMS" value="NA">NA
+          <input type="radio" name="q2" value="3" checked>3 (Trudno powiedzieć)
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q2" value="4">4 (Raczej zadowolony)
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q2" value="5">5 (Zadowolony)
         </label>
     </div>
-
+    <h3>Informacje o poszukiwaniach mieszkania</h3>
+    <b>Z jakich źródeł informacji korzystałeś w trakcie poszukiwań mieszkania</b>
     <div class="form-group">
-      <label for="wiek">Liczba nawrotów w ostatnich 12 miesiącach</label>
-      <select class="form-control" id="nawrot12" name="nawrot12">
-        <option>0</option>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-        <option>6</option>
-        <option>7</option>
-        <option>8</option>
-        <option>9</option>
-        <option>NA</option>
+        <label class="checkbox-inline">
+          <input type="checkbox" name="c1" value="1">Portale z ogłoszeniami lokalnymi
+          <input type="hidden" name="c1" value="0">
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" name="c2" value="1">Biuro pośrednictwa
+          <input type="hidden" name="c2" value="0">
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" name="c3" value="1">Studenckie bazy mieszkaniowe
+          <input type="hidden" name="c3" value="0">
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" name="c4" value="1">Portale społecznościowe
+          <input type="hidden" name="c4" value="0">
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" name="c5" value="1">Od znajomych
+          <input type="hidden" name="c5" value="0">
+        </label>
+    </div>
+    <div class="form-group">
+      <label for="search-amount">Ile mieszkań oglądałeś zanim zdecydowałeś/-aś się na wynajem:</label>
+      <select class="form-control" id="search-amount" name="search-amount">
+      {% for element in searchingamount %}
+        <option value="{{ element.id }}">{{element.name}}</option>
+      {% endfor %}
       </select>
     </div>
-
+    <b>Na jakie spośród wymienionych trudności natrafiłeś w rozważanych ofertach wynajmu:</b>
     <div class="form-group">
-      <label for="wiek">Liczba nawrotów w ostatnich 24 miesiącach</label>
-      <select class="form-control" id="nawrot24" name="nawrot24">
-        <option>0</option>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-        <option>6</option>
-        <option>7</option>
-        <option>8</option>
-        <option>9</option>
-        <option>NA</option>
-      </select>
+        <label class="checkbox-inline">
+          <input type="checkbox" name="c6" value="1">Brak możliwości wynajęcia studentom
+          <input type="hidden" name="c6" value="0">
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" name="c7" value="1">Brak możliwości wynajmu parom/małżeństwom z dzieckiem
+          <input type="hidden" name="c7" value="0">
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" name="c8" value="1">Zakaz palenia/spożywania alkoholu
+          <input type="hidden" name="c8" value="0">
+        </label>
+         <label class="checkbox-inline">
+          <input type="checkbox" name="c9" value="1">Zakaz posiadania zwierząt w mieszkaniu
+          <input type="hidden" name="c9" value="0">
+         </label>
+         <label class="checkbox-inline">
+          <input type="checkbox" name="c10" value="1">Zbyt wysoki poziom opłat
+          <input type="hidden" name="c10" value="0">
+         </label>
     </div>
-
-    <button type="submit" class="btn btn-default">Wyślij</button>
+    <div class="form-group">
+        <label for="others">Inne nieuwzględnione:</label>
+        <input type="text" class="form-control" id="others" name="others">
+    </div>
+    <button type="submit" class="btn btn-info">Save</button>
 </form>
 
 {% endblock %}
