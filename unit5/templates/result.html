@@ -17,8 +17,8 @@
     function drawCharts(){
         function drawChart(x, name, id){
             var data = new google.visualization.DataTable();
-            data.addColumn('string', 'Description');
-            data.addColumn('number', 'Count');
+            data.addColumn('string', 'opis');
+            data.addColumn('number', 'ilosc');
             data.addRows( x );
             var options = {
                 title: name
