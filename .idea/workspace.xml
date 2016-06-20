@@ -33,7 +33,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="unit5_webapp.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="unit5_webapp.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/unit5/unit5_webapp.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
@@ -77,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="result.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="result.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/unit5/templates/result.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+            <state relative-caret-position="306">
+              <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -161,7 +161,6 @@
         <option value="$PROJECT_DIR$/unit5/templates/result2.html" />
         <option value="$PROJECT_DIR$/../FlaskTask/unit5/templates/base.html" />
         <option value="$PROJECT_DIR$/../FlaskTask/pandas_preprocessing/pre_processing3.py" />
-        <option value="$PROJECT_DIR$/unit5/templates/result.html" />
         <option value="$PROJECT_DIR$/../MirrorWeb/app.py" />
         <option value="$PROJECT_DIR$/unit5/templates/results.html" />
         <option value="$PROJECT_DIR$/Procfile.txt" />
@@ -182,6 +181,7 @@
         <option value="$PROJECT_DIR$/dirbot/spiders/crawlmycrownspider.py" />
         <option value="$PROJECT_DIR$/dirbot/pipelines.py" />
         <option value="$PROJECT_DIR$/unit5/unit5_webapp.py" />
+        <option value="$PROJECT_DIR$/unit5/templates/result.html" />
       </list>
     </option>
   </component>
@@ -970,14 +970,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/unit5/templates/result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/result.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1027,6 +1019,14 @@
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unit5/templates/result.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
