@@ -54,7 +54,7 @@ def show_form():
 @app.route("/raw")
 def show_raw():
     fd = db.session.query(Formdata).all()
-    return render_template('raw.html', formdata=fd)
+    return render_template('data.html', formdata=fd)
 
 @app.route("/result")
 def show_result():
