@@ -271,9 +271,9 @@ def save():
 
 
     # Save the data
-    fd = Formdata(plec, wiek, zarobki, oczekiwania, staz, ostpodw , zadowolenie, zmianapracy, htyg)
-    db.session.add(fd)
-    db.session.commit()
+   # fd = Formdata(plec, wiek, zarobki, oczekiwania, staz, ostpodw , zadowolenie, zmianapracy, htyg)
+   # db.session.add(fd)
+   # db.session.commit()
 
     return redirect('/')
 
