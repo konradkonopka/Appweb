@@ -260,7 +260,7 @@ def show_results():
 def save():
     # Get data from FORM
     plec = request.form['plec']
-    #wiek = request.form['wiek']
+    wiek = request.form['wiek']
     #zarobki = request.form['zarobki']
     #oczekiwania = request.form['oczekiwania']
     #staz = request.form['staz']
@@ -271,9 +271,9 @@ def save():
 
 
     # Save the data
-   # fd = Formdata(plec, wiek, zarobki, oczekiwania, staz, ostpodw , zadowolenie, zmianapracy, htyg)
-   # db.session.add(fd)
-   # db.session.commit()
+    fd = Formdata(plec, wiek)
+    db.session.add(fd)
+    db.session.commit()
 
     return redirect('/')
 
