@@ -59,49 +59,49 @@ def show_raw():
 @app.route("/result")
 def show_result():
     print ("before")
-    os.system("python ../dirbot/spiders/crawlmycrownspider.py 1")
+    os.system("python ../dirbot/spiders/webcrawl.py 1")
     print ("after")
-    # call(['python ../dirbot/spiders/crawlmycrownspider.py shell=True'])
+
     with open('result.json') as data_file:
         data = json.load(data_file)
 
-        gender = []
-        age = []
-        ageonset = []
-        agediagnosis = []
-        durationms = []
+        plec = []
+        wiek = []
+        wiekrozpoczecia = []
+        wiekdiagnozy = []
+        czastrwania = []
         edss = []
-        lastms = []
-        relapse12 = []
-        relapse24 = []
+        kursms = []
+        nawrot12 = []
+        nawrot24 = []
 
         for x in data:
-            v1 = x["type"]
-            v2 = x["description"]
-            v3 = x["count"]
+            v1 = x["typ"]
+            v2 = x["opis"]
+            v3 = x["ilosc"]
             v1 = " ".join(str(v) for v in v1)
             v2 = " ".join(str(v) for v in v2)
             v3 = " ".join(str(v) for v in v3)
             if v1 == "Distribution of gender":
-                gender.extend([[v2, int(v3)]])
+                plec.extend([[v2, int(v3)]])
             if v1 == "Age":
-                age.extend([[v2,int(v3)]])
+                wiek.extend([[v2,int(v3)]])
             if v1 == "Age at onset":
-                ageonset.extend([[v2,int(v3)]])
+                wiekrozpoczecia.extend([[v2,int(v3)]])
             if v1 == "Age at diagnosis":
-                agediagnosis.extend([[v2, int(v3)]])
+                wiekdiagnozy.extend([[v2, int(v3)]])
             if v1 == "Duration of MS":
-                durationms.extend([[v2, int(v3)]])
+                czastrwania.extend([[v2, int(v3)]])
             if v1 == "EDSS at last visit":
                 edss.extend([[v2, int(v3)]])
             if v1 == "Last MSCourse":
-                lastms.extend([[v2, int(v3)]])
+                kursms.extend([[v2, int(v3)]])
             if v1 == "Relapse count over last 12 months":
-                relapse12.extend([[v2, int(v3)]])
+                nawrot12.extend([[v2, int(v3)]])
             if v1 == "Relapse count over last 24 months":
-                relapse24.extend([[v2, int(v3)]])
+                nawrot24.extend([[v2, int(v3)]])
 
-        my_dict={'gender': gender, 'age': age, 'ageonset':ageonset, 'agediagnosis': agediagnosis,'durationms':durationms, 'edss': edss,'lastms': lastms,'relapse12': relapse12,'relapse24':relapse24}
+        my_dict={'plec': plec, 'wiek': wiek, 'wiekrozpoczecia':wiekrozpoczecia, 'wiekdiagnozy': wiekdiagnozy,'czastrwania': czastrwania, 'edss': edss,'kursms': kursms,'nawrot12': nawrot12,'nawrot24': nawrot24}
         return render_template('result.html', my_dict=my_dict)
 
 @app.route("/this_result")
@@ -192,66 +192,9 @@ def show_results():
                 data.append(w)
         j += 1
 
-
-
     print (dane)
 
-
-    # dane_noduplicate = {}
-    # dane_noduplicate.fromkeys(dane.keys(), [])
-    # # for x in tableNames:
-    # #     # dane_noduplicate[x].append(None)
-    # #     dane_noduplicate[x].apend(list(set(dane[x])))
-    #
-    # # for x in tableNames:
-    # #     dane_noduplicate.append(list(set(dane[x])))
-    # print (dane_noduplicate)
-
-
-
-    # data = [
-    #     ["1) Distribution of gender","1) Female",1],
-    #     ["1) Distribution of gender", "1) Male",1],
-    #     ["2) Age", "2) < 20", 1],
-    #     ["2) Age", "2) 20-29", 1],
-    #     ["1) Female", "ID 1" ,1],
-    #     ["1) Male","ID 2",1],
-    #     ["2) < 20","ID 1",1],
-    #     ["2) 20-29", "ID 2", 1],
-    #     ["3) 0.0","3) Ostatni wynik EDSS",1],
-    #     ["3) 1.0", "3) Ostatni wynik EDSS", 1],
-    #     ["ID 1","3) 0.0",1],
-    #     ["ID 2","3) 1.0",1],
-    #     ["4) RR", "4) Last MSCourse",1],
-    #     ["4) SP", "4) Last MSCourse",1],
-    #     ["ID 1", "4) RR", 1],
-    #     ["ID 2", "4) SP", 1],
-    #     ]
-
-
-
-
-    # for x in tableNames:
-    #     licznik = 0
-    #     for y in range(0,len(dane_noduplicate[licznik])):
-    #         data.append[dane_noduplicate[x][y]]
-    #         licznik +=1
-
-
-
     return render_template('results.html', data=data)
-
-
-
-
-
-
-
-
-
-
-
-
 
 # [id_name, dane[id_name][1], 1],
 # [id_name, dane[id_name][2], 1],
@@ -276,11 +219,6 @@ def save():
     db.session.commit()
 
     return redirect('/')
-
-#@app.route("/crawler")
-#def runcrawler
-
-
 
 if __name__ == "__main__":
     # app.debug = True

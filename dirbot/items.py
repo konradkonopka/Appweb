@@ -2,6 +2,6 @@ from scrapy.item import Item, Field
 
 
 class Nazwy(Item):
-    description = Field()
-    type = Field()
-    count = Field()
+    opis = Field()
+    typ = Field()
+    ilosc = Field()
