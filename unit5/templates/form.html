@@ -1,0 +1,152 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="page-header">
+  <h1>Uzupełnij poniższy formularz</h1>
+</div>
+
+<form role="form" action="/save" method="post">
+    <b>Płeć</b>
+    <div class="form-group">
+        <label class="radio-inline">
+          <input type="radio" name="plec" value="M">Mężczyzna
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="plec" value="F">Kobieta
+        </label>
+    </div>
+
+    <div class="form-group">
+      <label for="wiek">Przedział wieku</label>
+      <select class="form-control" id="wiek" name="wiek">
+        <option><=20</option>
+        <option>21-25</option>
+        <option>26-30</option>
+        <option>31-35</option>
+        <option>36-40</option>
+        <option>41-50</option>
+        <option>51-55</option>
+        <option>>=56</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="wiek">Średnie zarobki brutto z ostatnich trzech miesięcy</label>
+      <select class="form-control" id="zarobki" name="zarobki">
+        <option>ponizej 1500zl</option>
+        <option>1500zl-2000zl</option>
+        <option>2000zl-2500zl</option>
+        <option>2500zl-3000zl</option>
+        <option>3000zl-3500zl</option>
+        <option>3500zl-4000zl</option>
+        <option>4000zl-4500zl</option>
+        <option>4500zl-5000zl</option>
+        <option>ponad 5000zl</option>
+      </select>
+    </div>
+
+
+
+    <div class="form-group">
+      <label for="wiek">Ile spodziewasz się zarabiać w okresie najbliższych 5 lat? (Oceń realnie swoje szanse)</label>
+      <select class="form-control" id="oczekiwania" name="oczekiwania">
+        <option>1500zl-2000zl</option>
+        <option>2000zl-2500zl</option>
+        <option>2500zl-3000zl</option>
+        <option>3000zl-3500zl</option>
+        <option>3500zl-4000zl</option>
+        <option>4000zl-4500zl</option>
+        <option>4500zl-5000zl</option>
+        <option>5000zl-5500zl</option>
+        <option>5500zl-6000zl</option>
+        <option>ponad 6000zl</option>
+      </select>
+    </div>
+
+
+    <div class="form-group">
+      <label for="wiek">Jak długo pracujesz na obecnym stanowisku</label>
+      <select class="form-control" id="staz" name="staz">
+        <option>1 rok</option>
+        <option>1-2 lata</option>
+        <option>2-4 lata</option>
+        <option>4-6 lat</option>
+        <option>6-8 lat</option>
+        <option>powyzej 8 lat</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="wiek">Kiedy miała miejsce Twoja ostatnia podwyżka?</label>
+      <select class="form-control" id="ostpodw" name="ostpodw">
+        <option>mniej niz 1 miesiac temu</option>
+        <option>1-3 miesiace</option>
+        <option>3-6 miesiacy</option>
+        <option>6-9 miesiacy</option>
+        <option>9-12 miesiacy</option>
+        <option>12-15 miesiacy</option>
+        <option>15-18 miesiacy</option>
+        <option>18-21 miesiacy</option>
+        <option>21-24 miesiace</option>
+        <option>2-3 lata</option>
+        <option>3-4 lata</option>
+        <option>4-5 lat</option>
+        <option>ponad 5 lat temu</option>
+      </select>
+    </div>
+
+    <b>Czy jesteś zadowolony/na ze swojej sytuacji zawodowej? (gdzie 1 oznacza niezadowolenie, 6 jestem zadowolony/na)</b>
+    <div class="form-group">
+        <label class="radio-inline">
+          <input type="radio" name="zadowolenie" value="1">1
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="zadowolenie" value="2">2
+        </label>
+      <label class="radio-inline">
+          <input type="radio" name="zadowolenie" value="3">3
+        </label>
+      <label class="radio-inline">
+          <input type="radio" name="zadowolenie" value="4">4
+        </label>
+      <label class="radio-inline">
+          <input type="radio" name="zadowolenie" value="5">5
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="zadowolenie" value="6">6
+        </label>
+    </div>
+
+    <div class="form-group">
+      <label for="wiek">Ile razy zmieniałeś/łaś pracę?</label>
+      <select class="form-control" id="zmianapracy" name="zmianapracy">
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>ponad 5</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="wiek">Ile godzin w tygodniu pracujesz?</label>
+      <select class="form-control" id="htyg" name="htyg">
+        <option><20</option>
+        <option>20-25</option>
+        <option>25-30</option>
+        <option>30-35</option>
+        <option>35-40</option>
+        <option>40-45</option>
+        <option>powyzej 45</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-default">Zakończ i wyślij</button>
+</form>
+
+{% endblock %}
+

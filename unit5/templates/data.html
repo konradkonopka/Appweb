@@ -1,0 +1,48 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="page-header">
+    <h1>Zebrane wyniki na podstawia formularza</h1>
+</div>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Stworzone (data)</th>
+        <th>Płeć</th>
+        <th>Wiek</th>
+        <th>Zarobki brutto</th>
+        <th>Oczekiwania zarobkowe</th>
+        <th>Staż pracy</th>
+        <th>Czas od ostatnie podwyżki</th>
+        <th>Poziom zadowolenia zawodowego</th>
+        <th>Liczba zmian stanowiska</th>
+        <th>Liczba godzin tygodniowo</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    {% for element in formdata %}
+    <tr>
+        <td>{{ element.id }}</td>
+        <td>{{ element.created_at }}</td>
+        <td>{{ element.plec }}</td>
+        <td>{{ element.wiek }}</td>
+        <td>{{ element.zarobki }}</td>
+        <td>{{ element.oczekiwania }}</td>
+        <td>{{ element.staz }}</td>
+        <td>{{ element.ostpodw }}</td>
+        <td>{{ element.zadowolenie }}</td>
+        <td>{{ element.zmianapracy }}</td>
+        <td>{{ element.htyg }}</td>
+
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock %}

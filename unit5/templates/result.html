@@ -1,0 +1,61 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="page-header">
+    <h1>Wizualizacja wyników pobranych z przykladowej witryny MSBase.org</h1>
+    <div id="chart_div"></div>
+</div>
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+    google.charts.load('current', {packages: ['corechart']});
+    google.charts.setOnLoadCallback(drawCharts);
+    function drawCharts(){
+        function drawChart(x, name, id){
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'opis');
+            data.addColumn('number', 'ilosc');
+            data.addRows( x );
+            var options = {
+                title: name
+            };
+            var chart = new google.visualization.PieChart(document.getElementById(id));
+            chart.draw(data, options);
+        }
+        drawChart({{my_dict.plec|tojson}}, 'Płeć', 'plec');
+        drawChart({{my_dict.wiek|tojson}}, "Wiek",'wiek');
+        drawChart({{my_dict.wiekrozpoczecia|tojson}}, "Wiek rozpoczecia choroby",'wiekrozpoczecia');
+        drawChart({{my_dict.wiekdiagnozy|tojson}}, "Wiek diagnozy", 'wiekdiagnozy');
+        drawChart({{my_dict.czastrwania|tojson}}, "Czas trwania choroby",'czastrwania');
+        drawChart({{my_dict.edss|tojson}}, "Ostatni wynik EDSS",'edss');
+        drawChart({{my_dict.kursms|tojson}}, "Ostatni kurs MS",'kursms');
+        drawChart({{my_dict.nawrot12|tojson}}, "Liczba nawrotow w ostatnich 12 miesiacach",'nawrot12');
+        drawChart({{my_dict.nawrot24|tojson}}, "Liczba nawrotow w ostatnich 24 miesiacach",'nawrot24');
+    }
+
+    </script>
+  </head>
+<body>
+
+<table class="columns">
+    <tr>
+        <td>
+        <div id="plec" style="width: 800px; height: 450px;"></div>
+        <div id="wiek" style="width: 800px; height: 450px;"></div>
+        <div id="wiekrozpoczecia" style="width: 800px; height: 450px;"></div>
+        <div id="wiekdiagnozy" style="width: 800px; height: 450px;"></div>
+        </td>
+        <td>
+        <div id="czastrwania" style="width: 800px; height: 450px;"></div>
+        <div id="edss" style="width: 800px; height: 450px;"></div>
+        <div id="kursms" style="width: 800px; height: 450px;"></div>
+        <div id="nawrot12" style="width: 800px; height: 450px;"></div>
+        </td>
+    </tr>
+</table>
+
+</body>
+{% endblock %}

@@ -1,0 +1,23 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <h1>Przykład aplikacji webowej</h1>
+    <p>Aplikacja powstała w celu nauki tworzenia i uruchamiania aplikacji webowych. Pozwala ona na wypełnienie prostego formularza, oraz wyświetlenie zebranych w ten sposób wyników. Aplikacja również pozwala na wyświetlenie prostych informacji ze strony MSBase.org w oparciu o gotowy wzorzec webcrawlera do przeszukiwania informacji.</p>
+  </div>
+
+  <div class="page-header">
+    <h1>Wybierz jeden z dostępnych kroków:</h1>
+  </div>
+  <p>
+    <a href="/form" class="btn btn-info btn-lg" role="button">Przejdź do formularza</a>
+    <a href="/data" class="btn btn-info btn-lg" role="button">Podgląd zebranych danych</a>
+    <a href="/result" class="btn btn-info btn-lg" role="button">Dane z MSBase</a>
+  </p>
+
+
+{% endblock %}
+
